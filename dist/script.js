@@ -21,25 +21,19 @@ menuIcon.addEventListener("click", () => {
 })
 
 // show scroll icon 
-const scrollTopIcon = document.getElementById('scroll-top-icon');
-
-const scrollUp = () => {
-    const scrollUp = document.getElementById('scroll-up');
-    this.scrollY >= 350? scrollUp.classList.add('show-scroll') : scrollUp.classList.remove('show-scroll');
-}
-
-window.addEventListener('scroll',scrollUp)
-// scroll to top 
-scrollTopIcon.addEventListener("click", () => {
-    const scrollToTop = () => {
-        if(window.pageYOffset > 0) {
-            window.scroll(0 , window.pageYOffset - 50);
-            requestAnimationFrame(scrollToTop);
+function scrollToTop() {
+    document.body.scrollTop = 0;  
+    document.documentElement.scrollTop = 0; 
+  }
+    // Toggle scroll-up icon visibility based on scroll position
+    window.onscroll = function() {
+        var scrollUpContainer = document.getElementById("scrollUpContainer");
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          scrollUpContainer.style.display = "block";
+        } else {
+          scrollUpContainer.style.display = "none";
         }
-    };
-    scrollToTop();
-})
-
+      };
 //scroll reveal animation 
 // scroller reveal 
 animateElement = (element,origin,delay,distance) => {
@@ -55,6 +49,7 @@ animateElement = (element,origin,delay,distance) => {
     // Reveal the element
     sr.reveal(element);
 }
+
 
 // section header 
 animateElement('.section-header','left',500,'250px');

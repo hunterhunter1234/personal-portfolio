@@ -1,0 +1,72 @@
+@media (max-width: 768px) {
+    :root {
+        /* Font sizes */
+        --fs-large: 2rem;
+        --fs-medium: 1.5rem;
+        --fs-regular: 1rem;
+    }
+
+    /* Reuse classes */
+    .section {
+        padding: 0 20px;
+    }
+
+    /* Home page */
+    .header-nav-list {
+        top: 50px;
+    }
+
+    .hero .hero-img {
+        height: 300px;
+    }
+
+    /* Project section */
+    .project {
+        flex-direction: column;
+    }
+
+    .project .project-img {
+        height: 50%;
+        width: 100%;
+    }
+
+    .project-img img {
+        height: 100%;
+    }
+
+    .project .project-content {
+        min-height: 45vh;
+        width: 100%;
+        padding-inline: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .project-content .btn-group button {
+        margin-right: 10px;
+    }
+
+    /* About section */
+    .about-section .about-img {
+        height: 50%;
+        width: 100%;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content .about-info {
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    /* Footer section */
+    .footer-section {
+        padding: 10px;
+        background-color: black;
+        color: #fff;
+        flex-direction: column;
+    }
+}
